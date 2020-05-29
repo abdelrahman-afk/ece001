@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computers | Article</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="layout.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="page4">
+<div class="tail-top-right"></div>
+<div id="main">
+  <!-- header -->
+  <div id="header">
+    <ul class="site-nav">
+      <li><a href="index.html" class="act">Home</a></li>
+      <li><a href="about-us.html">Architecture </a></li>
+      <li><a href="articles.html">Memory</a></li>
+      <li><a href="contact-us.html">help</a></li>
+      <li class="last"><a href="sitemap.html">Sitemap</a></li>
+    </ul>
+    <div class="logo"><a href="#"><img src="images/logo.gif" alt="" /></a></div>
+  </div>
+  <!-- content -->
+  <div id="content">
+    <div class="wrapper">
+      <div class="col-1">
+        <div class="box">
+          <div class="border-top">
+            <div class="border-right">
+              <div class="border-bot">
+                <div class="border-left">
+                  <div class="inner">
+                    <div class="title"><img src="images/extra-title.gif" alt="" /></div>
+                    <ul class="list">
+                      <li><span><a href="#">Motherboards</a></span></li>
+                      <li><span><a href="#">Processors</a></span></li>
+                      <li><span><a href="#">Desktops</a></span></li>
+                      <li><span><a href="#">Monitors</a></span></li>
+                      <li><span><a href="#">Laptops &amp; Notebooks</a></span></li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="indent">
+          <div class="title"><img src="images/4page-title.gif" alt="" /></div>
+          <div class="img-box1 p1"><img src="images/4page-img.jpg" alt="" />
+            <p>FACS (FPGA-Accelerated Cache Simulator) is a fully parameterizable hardware functional piranhabased [6] multiprocessor cache model that precisely replicates the behavior of the existing software-based
+TraceCMPFlex cache model. This corresponds to arrow 2 in Figure 1. FACS can receive and process
+dynamically generated references from Protoflex at full speed, allowing simulation to proceed without
+any slowdown. For each incoming memory reference FACS updates the cache tags and maintains
+coherence among the private L1 caches, while also keeping detailed L1 and L2 cache statistics. Our
+results show that FACS is roughly 200 times faster than the equivalent software functional cache model it
+simulates. When combined with FACS, ProtoFlex can accelerate a full 16-cpu chip multiprocessor with
+private 64KB L1 I&D caches and a 16MB shared L2 by a factor of roughly 100x</p>
+          </div>
+          <p class="p1">Software Development
+FACS also required a significant amount of software development, which mainly concerned Flexus, as
+mentioned in the software methodology section above. In addition, a couple of additional tools were
+developed to help analyze the cache statistics results from FACS and Flexus:
+Converter
+Converter is a simple C++ program to translate the dumped memory references from Flexus into the
+binary format recognizable by FACS. The devising of a binary format involved a fair amount of hacking
+to overcome the architectural characteristics of the PowerPC on the BEE2 board, as mentioned in the
+hardware methodology section above.
+Comparator
+Comparator is a simple Python script to automate the comparison of the L2 and the 16 L1 I- and Dcache statistics from FACS and Flexus. It reports the total references from each model and displays any
+discrepancies. A thorough analyses of the L1 and L2 statistics is presented in Appendix A.
+Results
+In order to evaluate FACS we compared the time it takes to process references using the software
+TraceCMPFlex cache model against the time it takes to process the references using FACS. Figures 4 and
+5 plot the required time to process millions of references and Figure 6 shows the equivalent speedup
+values. For the Flexus TraceCMPFlex software-based cache simulator we plot two curves, which
+correspond to the execution on two different machines with the following specifications.
+An Intel Xeon @ 2.8GHz with 512KB L2 cache and 3GB RAM (2 cores in total; machine
+tamdhu in the ECE Scotch cluster)
+A dual Intel Xeon 5130 running at 2GHz with 4MB shared L2 cache and 8GB RAM (4 cores in
+total; machine brackla in the ECE Scotch cluster)
+For FACS, our hardware cache model, we also plot two separate curves. The first curve corresponds
+to the common case, where the average L1 cache hit rate is above 75%. This is typical for most programs
+and was true for all of the workloads that we tried. The second curve corresponds to the worst case, where 
+all references miss in the L1 cache (0% L1 cache hit rate). In either case FACS is roughly 200 times faster
+than the software cache simulator, regardless of which machine is it executed on.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div id="footer">
+    <div class="indent">
+      <div class="fleft">Copyrights - Type in Your Name</div>
+      <div class="fright">Designed by: <a href="http://www.templates.com"><img alt="" src="images/templates-logo.gif" /></a>&nbsp; Your <a href="http://www.templates.com/product/3d-models/">3D Models</a> Marketplace</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

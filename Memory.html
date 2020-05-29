@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Computers | Articles</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="layout.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="page3">
+<div class="tail-top-right"></div>
+<div id="main">
+  <!-- header -->
+  <div id="header">
+       <ul class="site-nav">
+      <li><a href="index.html" class="act">Home</a></li>
+      <li><a href="Architecture.html">Architecture </a></li>
+      <li><a href="Memory.html">Memory</a></li>
+      <li><a href="help.html">help</a></li>
+      <li class="last"><a href="sitemap.html">Sitemap</a></li>
+    </ul>
+    <div class="logo"><a href="#"><img src="images/logo.gif" alt="" /></a></div>
+  </div>
+  <!-- content -->
+  <div id="content">
+    <div class="wrapper">
+      <div class="col-1">
+        <div class="box">
+          <div class="border-top">
+            <div class="border-right">
+              <div class="border-bot">
+                <div class="border-left">
+                  <div class="inner">
+                    <div class="title"><img src="images/extra-title.gif" alt="" /></div>
+                    <ul class="list">
+                      <li><span><a href="#">Motherboards</a></span></li>
+                      <li><span><a href="#">Processors</a></span></li>
+                      <li><span><a href="#">Desktops</a></span></li>
+                      <li><span><a href="#">Monitors</a></span></li>
+                      <li><span><a href="#">Laptops &amp; Notebooks</a></span></li>
+             
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="indent">
+          <div class="title"><img src="images/3page-title.gif" alt="" /></div>
+          <ul class="list1">
+            <li><img src="images/3page-img1.jpg" alt="" />
+              <h3><a href="article.html">Article 1</a></h3>
+              <p>L1 Caches
+The default L1 cache configuration in FACS consists of 32 2-way set-associative 64KB L1 caches;
+16 dedicated to data and 16 for instructions. The default size of each cache block is 64 bytes. In an actual
+implementation of a piranha-based cache a copy of the L1 cache tags is stored in the L2 cache to be used
+as a directory for maintaining coherence. When a CPU misses in its local L1 cache the memory reference
+travels to the L2 cache and consults the directory to find out if a remote L1 cache has a copy and take
+appropriate coherence actions. However, given the fact that ProtoFlex generates memory references
+serially, FACS is able to follow a simpler approach</p>
+            </li>
+            <li><img src="images/3page-img2.jpg" alt="" />
+              <h3><a href="#">Article 2</a></h3>
+              <p>L2 Cache
+In piranha-based cache schemes the L2 caches act as victim caches. This means that blocks are
+inserted in the L2 cache only when they are evicted from some L1 cache. In the specific cache model
+(TraceCMPFlex), blocks are also inserted into the L2 cache to facilitate block transfers from one L1 to
+another L1 cache. For instance, if a CPU attempts to write a cache block that also resides in a remote L1
+cache, the cache block will also be inserted into the L2 cache. As far as LRU is concerned FACS
+precisely replicates the pseudo-LRU algorithm used in the software implementation of the cache model
+(TraceCMPFlex).</p>
+            </li>
+            <li><img src="images/3page-img3.jpg" alt="" />
+              <h3><a href="#">Article 3</a></h3>
+              <p>FACS Architecture
+The architecture of FACS at the module-level is depicted in the block diagram of figure 3. As seen
+in the previous section at the highest level FACS consists of two core modules; one that simulates all of
+the L1 caches and one that simulates the L2 cache. The “L1 Caches” module contains two identical
+instances of the same submodule, one for implementing the Instruction and one for implementing the
+Data caches. Each such submodule (Instruction or Data) instantiates a statistics module and 16 “L1cache”
+modules. Finally, the L1cache module represents the private cache of each CPU in the system and
+contains the LRU logic along with two submodules that simulate each one of the two ways that belong to
+the L1 cache of each processor. The L2 cache module is quite simpler; it instantiates the 8 2MB ways,
+implements the LRU logic and also keeps statistics</p>
+            </li>
+            <li class="last"><img src="images/3page-img4.jpg" alt="" />
+              <h3><a href="#">Article 4</a></h3>
+              <p>The actual implementation contains numerous other basic modules, such as FIFO queues, that act as
+building blocks for creating the higher-level modules mentioned above. FACS uses FIFO queues for
+receiving references from the “outside world”, forwarding references from the “L1 caches” to the “L2
+cache” module and for scanning out the actual L1 and L2 cache contents. Other examples of basic
+modules include fully parameterizable decoders, multiplexors and dual-port memories.
+</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- footer -->
+  <div id="footer">
+    <div class="indent">
+      <div class="fleft">Copyrights - Abdelrahman el sayed</div>
+    
+  </div>
+</div>
+</body>
+</html>
